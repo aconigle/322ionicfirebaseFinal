@@ -23,17 +23,14 @@ export class ListDetailPage {
     constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public dataService: DataProvider) {
         console.log(this.navParams.data);
         this.speakerDetails = this.navParams.data[0].speakerItem;
-        console.log('spaker ', this.speakerDetails);
         this.speaker = this.navParams.data[0].speaker;
     }
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad ListDetailPage');
-        // this.speakerDetails = this.dataService.speakerList;
-
     }
 
-    editStory(): void {
+    editSong(): void {
 
         let prompt = this.alertCtrl.create({
             title: 'Add To This Story',
@@ -63,7 +60,6 @@ export class ListDetailPage {
                             this.speaker.speakerInfo[idx] = this.speakerDetails;
                         }
 
-                        // this.dataService.addStoryToDB(, data);
                         this.dataService.addStoryToDB(this.speaker);
 
                     }

@@ -19,7 +19,6 @@ export class DetailPage {
     }
 
     itemClicked(speaker, item): void {
-        // item.id = sid;
         this.navCtrl.push('ListDetailPage', [{
             speaker: speaker,
             speakerItem: item
@@ -28,12 +27,12 @@ export class DetailPage {
 
     addHeader(): void {
         let prompt = this.alertCtrl.create({
-            title: 'Add Story Title',
-            message: "Enter a story name below.",
+            title: 'Add Song Genre',
+            message: "Enter new favorite song genre.",
             inputs: [
                 {
                     name: 'title',
-                    placeholder: 'Story Name'
+                    placeholder: 'song classification'
                 },
             ],
             buttons: [
@@ -46,7 +45,7 @@ export class DetailPage {
                 {
                     text: 'Save',
                     handler: data => {
-                        this.dataService.addHeaderToDB(data);
+                        this.dataService.addNewTitleToDB(data);
                     }
                 }
             ]
@@ -56,20 +55,20 @@ export class DetailPage {
 
     addSpeakerToList(speaker): void {
         let prompt = this.alertCtrl.create({
-            title: 'Add User Name',
-            message: "Enter storyteller's name below.",
+            title: 'Add Artist Name',
+            message: "Enter song artists name below.",
             inputs: [
                 {
-                    name: 'author',
-                    placeholder: 'Storyteller Name'
+                    name: 'artist',
+                    placeholder: 'Artists Name'
                 },
                 {
-                    name: 'storyName',
-                    placeholder: 'Story Name'
+                    name: 'songTitle',
+                    placeholder: 'Song Name'
                 },
                 {
-                    name: 'story',
-                    placeholder: 'Fill in story here...'
+                    name: 'album',
+                    placeholder: 'Album song was released on'
                 },
             ],
             buttons: [

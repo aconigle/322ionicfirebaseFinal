@@ -7,7 +7,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {MyApp} from './app.component';
 import {DataProvider} from '../providers/data/data';
-import {firebaseConfig} from "./firebase.config";
+import {fBConfig} from "./firebase.config";
 
 @NgModule({
     declarations: [
@@ -16,7 +16,7 @@ import {firebaseConfig} from "./firebase.config";
     imports: [
         BrowserModule,
         IonicModule.forRoot(MyApp),
-        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireModule.initializeApp(fBConfig),
         AngularFirestoreModule.enablePersistence()
     ],
     bootstrap: [IonicApp],

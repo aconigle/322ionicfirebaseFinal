@@ -1,8 +1,8 @@
-export const firebaseConfig = {
-    apiKey: "AIzaSyBsgQ4Jbah0TYVecZCf7oG3oLObC31RkIo",
-    authDomain: "final322-87198.firebaseapp.com",
-    databaseURL: "https://final322-87198.firebaseio.com",
-    projectId: "final322-87198",
-    storageBucket: "final322-87198.appspot.com",
-    messagingSenderId: "165447034124"
+export const fBConfig = {
+    apiKey: "AIzaSyAhjaGf2vn0MM3rhnDVKBYjo2XDTeoXRl8",
+    authDomain: "songlist-10c52.firebaseapp.com",
+    databaseURL: "https://songlist-10c52.firebaseio.com",
+    projectId: "songlist-10c52",
+    storageBucket: "songlist-10c52.appspot.com",
+    messagingSenderId: "70807993358"
 };

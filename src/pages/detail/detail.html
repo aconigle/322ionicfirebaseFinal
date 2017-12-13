@@ -7,10 +7,10 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Story Names - Click Names to Read Stories</ion-title>
+        <ion-title>Songs List</ion-title>
         <ion-buttons end>
             <button ion-button icon-only (click)="addHeader()">
-                <ion-icon name="add"></ion-icon>
+                <ion-icon name="create"></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
@@ -20,22 +20,22 @@
 
 <ion-content padding>
     <ion-list *ngFor="let speaker of speakers | async">
-        <ion-list-header>
+        <ion-list-header style="color: blueviolet;">
             {{speaker.listHeader}}
-
-            <button ion-button icon-only float-end clear (click)="addSpeakerToList(speaker)">
+            <button color="secondary" ion-button icon-only float-end clear (click)="addSpeakerToList(speaker)">
                 <ion-icon name="add"></ion-icon>
             </button>
 
         </ion-list-header>
 
         <ion-item-sliding *ngFor="let speakerItem of speaker.speakerInfo">
-            <button ion-item (click)="itemClicked(speaker, speakerItem)" float-left="">
-                {{speakerItem.storyName}}
+            <button color="secondary" ion-item (click)="itemClicked(speaker, speakerItem)" float-left="">
+                {{speakerItem.songTitle}}
             </button>
             <ion-item-options>
-                <button ion-button icon-only (click)="deleteSpeaker(speaker, speakerItem)">
-                    <ion-icon name="trash"></ion-icon>
+                <button color="light" ion-button icon-only (click)="deleteSpeaker(speaker, speakerItem)">
+                    Delete
+                    <ion-icon color='danger' name="trash"></ion-icon>
                 </button>
             </ion-item-options>
         </ion-item-sliding>

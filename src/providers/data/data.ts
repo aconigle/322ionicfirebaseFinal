@@ -31,7 +31,7 @@ export class DataProvider {
         });
     }
 
-    addHeaderToDB(header): void {
+    addNewTitleToDB(header): void {
         if (header) {
             this.speakersListRef.add({listHeader: header.title, speakerInfo: []});
         }
