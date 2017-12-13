@@ -10,7 +10,7 @@
             <h1 style="color: blueviolet;">Songs List</h1>
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only (click)="addHeader()">
+            <button ion-button icon-only (click)="addSongGenre()">
                 <ion-icon style="color:blueviolet;" name="create"></ion-icon>
             </button>
         </ion-buttons>
@@ -23,7 +23,7 @@
     <ion-list *ngFor="let speaker of speakers | async">
         <ion-list-header style="color: blueviolet;">
             <h2>{{speaker.listHeader}}</h2>
-            <button color="secondary" ion-button icon-only float-end clear (click)="addSpeakerToList(speaker)">
+            <button color="secondary" ion-button icon-only float-end clear (click)="addSongToList(speaker)">
                 <ion-icon style="color:rebeccapurple;" name="add"></ion-icon>
             </button>
 

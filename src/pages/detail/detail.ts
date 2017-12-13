@@ -25,7 +25,7 @@ export class DetailPage {
         }]);
     }
 
-    addHeader(): void {
+    addSongGenre(): void {
         let prompt = this.alertCtrl.create({
             title: 'Add Song Genre',
             message: "Enter new favorite song genre.",
@@ -53,7 +53,7 @@ export class DetailPage {
         prompt.present();
     }
 
-    addSpeakerToList(speaker): void {
+    addSongToList(speaker): void {
         let prompt = this.alertCtrl.create({
             title: 'Add Artist Name',
             message: "Enter song artists name below.",
@@ -81,7 +81,7 @@ export class DetailPage {
                 {
                     text: 'Save',
                     handler: data => {
-                        this.dataService.addSpeakerToDB(speaker, data);
+                        this.dataService.addSongToDB(speaker, data);
                     }
                 }
             ]

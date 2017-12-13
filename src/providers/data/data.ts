@@ -37,7 +37,7 @@ export class DataProvider {
         }
     }
 
-    addSpeakerToDB(speaker, speakerData): void {
+    addSongToDB(speaker, speakerData): void {
         speaker.speakerInfo.push(speakerData);
         this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
     }
