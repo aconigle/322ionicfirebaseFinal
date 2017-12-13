@@ -29,8 +29,13 @@
         </ion-list-header>
 
         <ion-item-sliding *ngFor="let speakerItem of speaker.speakerInfo">
+
             <button color="secondary" ion-item (click)="songClicked(speaker, speakerItem)" float-left="">
-                {{speakerItem.songTitle}}
+                <h2>Song: {{speakerItem.songTitle}}</h2>
+                <br/>
+                <h2 style="color: blueviolet;">Artist: {{speakerItem.artist}}</h2>
+                <br/>
+                <h2 style="color:blueviolet;">Album: {{speakerItem.album}}</h2>
             </button>
             <ion-item-options>
                 <button color="light" ion-button icon-only (click)="deleteSong(speaker, speakerItem)">
@@ -38,6 +43,7 @@
                     <ion-icon color='danger' name="trash"></ion-icon>
                 </button>
             </ion-item-options>
+
         </ion-item-sliding>
     </ion-list>
 </ion-content>
