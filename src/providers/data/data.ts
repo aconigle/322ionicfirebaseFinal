@@ -42,6 +42,15 @@ export class DataProvider {
         this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
     }
 
+
+    editSongInDB(spk): void {
+
+        if (spk) {
+            this.speakersListRef.doc(spk.id).update({speakerInfo: spk.speakerInfo});
+        }
+    }
+
+
     removeSongFromDB(speaker, currentSpeaker): void {
         let index = speaker.speakerInfo.indexOf(currentSpeaker);
         if (index > -1) {

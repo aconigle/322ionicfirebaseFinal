@@ -17,7 +17,11 @@
 
 <ion-content padding>
     <ion-list>
+
         <ion-item>
+            <button ion-button icon-only float-end clear (click)="editSong()">
+                <ion-icon name="hammer"></ion-icon>
+            </button>
             <h1 style="color:darkviolet">Song: {{speakerDetails.songTitle}}</h1>
             <br/>
             <h2 style="color: blueviolet;">Artist: {{speakerDetails.artist}}</h2>
