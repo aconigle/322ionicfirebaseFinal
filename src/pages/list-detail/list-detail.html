@@ -7,7 +7,9 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Song Information</ion-title>
+        <ion-title>
+            <h1 style="color: blueviolet;">Song Information</h1>
+        </ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -16,18 +18,11 @@
 <ion-content padding>
     <ion-list>
         <ion-item>
-
-            <h2 style="color: rebeccapurple;">{{speakerDetails.artist}}</h2>
+            <h1 style="color:darkviolet">Song: {{speakerDetails.songTitle}}</h1>
             <br/>
-            <h1 style="color:darkviolet">{{speakerDetails.songTitle}}</h1>
+            <h2 style="color: blueviolet;">Artist: {{speakerDetails.artist}}</h2>
             <br/>
-            <p style="color:blueviolet;">
-                {{speakerDetails.album}}
-                <button ion-button icon-only float-end clear (click)="editSong()">
-                    <!--edits song info-->
-                    <ion-icon name="create"></ion-icon>
-                </button>
-            </p>
+            <h2 style="color:blueviolet;">Album: {{speakerDetails.album}}</h2>
         </ion-item>
     </ion-list>
 </ion-content>

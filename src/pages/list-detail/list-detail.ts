@@ -29,44 +29,4 @@ export class ListDetailPage {
     ionViewDidLoad() {
         console.log('ionViewDidLoad ListDetailPage');
     }
-
-    editSong(): void {
-
-        let prompt = this.alertCtrl.create({
-            title: 'Add To This Story',
-            message: "Add more story aspects onto this story.",
-            inputs: [
-                {
-
-                    name: 'story',
-                    placeholder: 'Fill in story here...',
-                    value: this.speakerDetails.story
-                },
-            ],
-            buttons: [
-                {
-                    text: 'Cancel',
-                    handler: data => {
-                        console.log('Cancel clicked');
-                    }
-                },
-                {
-                    text: 'Save',
-                    handler: data => {
-                        this.speakerDetails.story = data.story;
-
-                        let idx = this.speaker.speakerInfo.indexOf(this.speakerDetails);
-                        if (idx >= 0) {
-                            this.speaker.speakerInfo[idx] = this.speakerDetails;
-                        }
-
-                        this.dataService.addStoryToDB(this.speaker);
-
-                    }
-                }
-            ]
-        });
-        prompt.present();
-    }
-
 }
