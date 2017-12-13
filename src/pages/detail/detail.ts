@@ -18,7 +18,7 @@ export class DetailPage {
         this.speakers = this.dataService.speakerList;
     }
 
-    itemClicked(speaker, item): void {
+    songClicked(speaker, item): void {
         this.navCtrl.push('ListDetailPage', [{
             speaker: speaker,
             speakerItem: item
