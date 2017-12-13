@@ -42,7 +42,7 @@ export class DataProvider {
         this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
     }
 
-    removeSpeakerToDB(speaker, currentSpeaker): void {
+    removeSongFromDB(speaker, currentSpeaker): void {
         let index = speaker.speakerInfo.indexOf(currentSpeaker);
         if (index > -1) {
             speaker.speakerInfo.splice(index, 1);
@@ -51,10 +51,11 @@ export class DataProvider {
     }
 
     removeGenreFromDB(speaker, currentGenre): void {
+        this.speakersListRef.doc(speaker.id).delete();
         let index = speaker.speaker.indexOf(currentGenre);
         if (index > -1) {
             speaker.speaker.splice(index, 1);
-            this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
+            this.speakersListRef.doc(speaker.id).update({listHeader: speaker.title, speakerInfo: []});
         }
     }
 }

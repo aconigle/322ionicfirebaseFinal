@@ -90,10 +90,6 @@ export class DetailPage {
     }
 
     deleteSong(speaker, currentSpeaker): void {
-        this.dataService.removeSpeakerToDB(speaker, currentSpeaker);
-    }
-
-    deleteGenre(speaker, currentGenre): void {
-        this.dataService.removeGenreFromDB(speaker, currentGenre);
+        this.dataService.removeSongFromDB(speaker, currentSpeaker);
     }
 }
