@@ -89,8 +89,11 @@ export class DetailPage {
         prompt.present();
     }
 
-    deleteSpeaker(speaker, currentSpeaker): void {
+    deleteSong(speaker, currentSpeaker): void {
         this.dataService.removeSpeakerToDB(speaker, currentSpeaker);
     }
 
+    deleteGenre(speaker, currentGenre): void {
+        this.dataService.removeGenreFromDB(speaker, currentGenre);
+    }
 }

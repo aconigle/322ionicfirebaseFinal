@@ -42,17 +42,18 @@ export class DataProvider {
         this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
     }
 
-    addStoryToDB(spk): void {
-        console.log(spk.speakerInfo);
-        if (spk) {
-            this.speakersListRef.doc(spk.id).update({speakerInfo: spk.speakerInfo})
-        }
-    }
-
     removeSpeakerToDB(speaker, currentSpeaker): void {
         let index = speaker.speakerInfo.indexOf(currentSpeaker);
         if (index > -1) {
             speaker.speakerInfo.splice(index, 1);
+            this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
+        }
+    }
+
+    removeGenreFromDB(speaker, currentGenre): void {
+        let index = speaker.speaker.indexOf(currentGenre);
+        if (index > -1) {
+            speaker.speaker.splice(index, 1);
             this.speakersListRef.doc(speaker.id).update({speakerInfo: speaker.speakerInfo});
         }
     }
