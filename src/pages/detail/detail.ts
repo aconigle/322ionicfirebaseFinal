@@ -55,8 +55,8 @@ export class DetailPage {
 
     addSongToList(speaker): void {
         let prompt = this.alertCtrl.create({
-            title: 'Add Artist Name',
-            message: "Enter song artists name below.",
+            title: 'Add Song',
+            message: "Enter song information below.",
             inputs: [
                 {
                     name: 'artist',
