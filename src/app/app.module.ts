@@ -3,19 +3,15 @@ import {ErrorHandler, NgModule} from '@angular/core';
 import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
-
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {MyApp} from './app.component';
-import {HomePage} from '../pages/home/home';
-
-//firebase
-import {AngularFireModule} from "angularfire2";
-import {AngularFirestoreModule} from "angularfire2/firestore";
-import {firebaseConfig} from './firebase.config';
+import {DataProvider} from '../providers/data/data';
+import {firebaseConfig} from "./firebase.config";
 
 @NgModule({
     declarations: [
-        MyApp,
-        HomePage
+        MyApp
     ],
     imports: [
         BrowserModule,
@@ -25,13 +21,13 @@ import {firebaseConfig} from './firebase.config';
     ],
     bootstrap: [IonicApp],
     entryComponents: [
-        MyApp,
-        HomePage
+        MyApp
     ],
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: ErrorHandler, useClass: IonicErrorHandler}
+        {provide: ErrorHandler, useClass: IonicErrorHandler},
+        DataProvider
     ]
 })
 export class AppModule {

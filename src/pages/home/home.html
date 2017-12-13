@@ -1,14 +1,39 @@
+<!--<ion-header>-->
+<!--<ion-navbar>-->
+<!--<ion-title>-->
+<!--Movies-->
+<!--</ion-title>-->
+<!--<ion-buttons end>-->
+<!--<button ion-button icon-only (click)="addMovie()">-->
+<!--<ion-icon name="add"></ion-icon>-->
+<!--</button>-->
+<!--</ion-buttons>-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<!--<ion-content padding>-->
+<!--<ion-list>-->
+<!--<ion-item-sliding side="left" *ngFor="let movie of movies | async" (click)="showOptions(movie.id, movie.title, movie.year)">-->
+<!--{{movie.title}}-->
+<!--{{movie.year}}-->
+<!--</ion-item-sliding>-->
+
+<!--</ion-list>-->
+<!--</ion-content>-->
+
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title padding>
+            <h1 style="color: darkslateblue;"> Favorite Song List Application</h1>
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <h2 style="color: darkviolet;">Remember your favorite songs...</h2>
+    <img src="../../assets/imgs/logo.jpg" height="80" width="80"/>
+
+    <h4 style="color: blueviolet;">If you're like me and can't ever seem to remember the names of your favorite songs,
+        then this list app should help you out!</h4>
+    <button ion-button color="secondary" (click)="showList()" full>View Songs</button>
 </ion-content>
